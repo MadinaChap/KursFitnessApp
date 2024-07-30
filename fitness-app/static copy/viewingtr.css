@@ -1,0 +1,213 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+.container {
+    position:inherit;
+}
+
+
+
+.content{
+    max-width: 650px;
+    margin: 1px auto;
+    padding: 15px;
+    border: 10px solid #fff;
+    background-color: transparent;
+    height: 100%;
+    border-bottom: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.exercise-box {
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 10px;
+    margin-bottom: 10px; 
+    background-color:transparent; 
+}
+.info-popup {
+    display: none; /* скрываем окно по умолчанию */
+    position: fixed; /* фиксируем окно на странице */
+    top: 50%; /* позиционируем окно по центру вертикали */
+    left: 50%; /* позиционируем окно по центру горизонтали */
+    transform: translate(-50%, -50%); /* центрируем окно точно по центру экрана */
+    padding: 20px; /* добавляем отступы вокруг содержимого окна */
+    background-color: #ffffff; /* устанавливаем цвет фона окна */
+    border: 2px solid #211c3d; /* добавляем рамку окружности вокруг окна */
+    border-radius: 10px; /* скругляем углы окна */
+    transition: visibility 0s, opacity 0.5s;
+    color: #0f2027;
+}
+
+#close-popup{
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 15px; 
+    background-color: #203a43; 
+    color: #fff; 
+    cursor: pointer;
+}
+#exercise-description{
+    text-align: justify;
+}
+#exercise-name{
+    text-align: justify;
+}
+
+.stripes-container {
+    overflow: hidden;
+    position: relative;
+    height: 200px; /* Высота контейнера */
+}
+
+.stripe {
+    height: 25px; /* Высота полосы */
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    animation: moveStripes 2s linear infinite;
+}
+
+@keyframes moveStripes {
+    0% {
+        top: -20px; /* Начальное положение полосы */
+        opacity: 1; /* Полностью непрозрачные полосы в начале */
+    }
+    100% {
+        top: 200px; /* Конечное положение полосы */
+        opacity: 0; /* Полностью прозрачные полосы в конце */
+    }
+}
+
+.stripe:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stripe:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.stripe:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
+
+h1{
+    text-align: center;
+}
+p {
+    width: 48%;
+    font-size: 20px;
+    display: inline;
+    margin-bottom: 10px;
+}
+label{
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+button{
+    margin: 10px;
+    background-color: transparent;
+    border: white;
+    font-size: 15px;
+    color: azure;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 10px;
+}
+.button{
+    margin: 10px;
+    background-color: transparent;
+    border: white;
+    font-size: 15px;
+    color: azure;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 10px;
+}
+
+
+
+.contentt{
+    max-width: 650px;
+    margin: 100px auto;
+    padding: 15px;
+    border: 10px solid #fff;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+.arrow-left-5{
+    margin: 20px 8px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    fill: #337AB7; 
+    transition: fill 0.5s ease-out, transform 0.3s ease-in;    
+}
+.arrow-left-5 {
+    transform: rotate(90deg);
+}
+
+.arrow-left-5:hover {
+    fill: #BFE2FF;
+    transform: scale(1.2);
+}
+.arrow-left-5:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    border: none;
+    border-bottom: 2px solid #ffffff; /* белая полоса снизу */
+    background-color: transparent; /* прозрачный фон */
+    color: #ffffff; /* цвет текста */
+}
+
+
+#centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-container {
+    display: flex;
+}
+
+#input-container input[type="text"] {
+    margin-left: 10px; /* отступ элемента для ввода от текста */
+    border: none;
+    border-bottom: 2px solid #ffffff; /* белая полоса снизу */
+    background-color: transparent; /* прозрачный фон */
+    color: #ffffff; /* цвет текста */
+}
+
+#input-container input[type="submit"] {
+    background-color: #ffffff; /* белый фон для кнопок */
+    color: #000000; /* цвет текста кнопок */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px; /* отступ сверху для кнопки */
+}
+

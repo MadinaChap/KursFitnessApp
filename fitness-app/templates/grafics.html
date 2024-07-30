@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Графики</title>
+    <link rel="stylesheet" type="text/css" href="/static/calendar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/home"class="button">На домашнюю страницу</a>
+    <h2>Графики</h2>
+    <img src="{{ url_for('static', filename='grafics/time.png') }}" alt="Time Chart">
+    <img src="{{ url_for('static', filename='grafics/weight.png') }}" alt="Weight Chart">
+</body>
+</html>

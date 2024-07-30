@@ -1,0 +1,64 @@
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Poppins", serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+h1 {
+    font-weight: 800;
+    margin: 1rem 0 0;
+}
+
+/* Стили для таблицы календаря */
+table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.day-circle {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.5rem;
+}
+
+.green {
+    background-color: rgb(38, 74, 38);
+}
+
+.red {
+    background-color: rgba(38, 33, 33, 0.3);
+}
+
+
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+}
+
+.button{
+    margin: 10px;
+    background-color: transparent;
+    border: white;
+    font-size: 15px;
+    color: azure;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 10px;
+}

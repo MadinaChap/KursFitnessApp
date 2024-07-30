@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка файла</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ypr.css') }}">
+</head>
+<body>
+    <button onclick="closeWindow()" class="button">Вернуться в профиль</button>
+    <form action="/create" method="get">
+        <button type="submit" class="button">Добавить упражнение</button>
+    </form>
+
+    <h1>Содержимое файлов:</h1>
+    {% for filename, content in files_content.items() %}
+        <h3>{{ content['name'] }}</h3>
+        <p>
+            Инструкция по выполнению<br>
+            <br>
+            {% for sentence in content['description'].split('. ') %}
+                {{ sentence }}.<br><br>
+            {% endfor %}
+        </p>
+        <img src="{{ url_for('static', filename=content['image_path']) }}" alt="{{ content['name'] }}" width="50%" height="auto" >
+        <a href="/edit/{{ filename }}" class="button">Редактировать</a>
+        <a href="/edit/{{ filename }}" class="button">Удалить</a>
+    {% endfor %}
+
+    <form action="/create" method="get">
+        <button type="submit" class="button">Добавить упражнение</button>
+    </form>
+
+    <script>
+        function closeWindow(){
+            window.close();
+        }
+    </script>
+
+</body>
+</html>

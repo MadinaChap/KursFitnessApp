@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header .buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: #2c5364;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.cont {
+    display: inline-block;
+}
+.header {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column; /*в столбик*/
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+#form{
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.container button{
+    margin: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: azure;
+}
+
+button:hover{
+    color:chocolate;
+}
+
+#form h1 {
+    color: white;
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <script src="/static/timer.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/viewingtr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Название тренировки: {{ trenirovka['name'] }}</h1>
+    <h3>Подход номер: {{ podhod_view }}</h3>
+    <h3>Упражнение: {{ exercise['name_ypr'] }}</h3>
+    <p>{{ phrasa }}</p>
+    <br>
+    <br>
+    <p>{{ exercise['description'] }}</p>
+    <br>
+    <br>
+    <p>Время: {{ exercise['time'] }}</p>
+    <br>
+    <img src="{{ url_for('static', filename=exercise['image_path'].replace('static/', '')) }}" alt="{{ exercise['name'] }}">
+    <br>
+    <br>
+    <p id="timer">00:00</p> 
+    <br>
+    <a href="/end_trenirovka" class="button">Закончить</a>
+    <a href="/start_trenirovka/{{ filename }}/{{ podhod }}/{{ number_exercise }}" class="button">Далее</a>
+
+</body>
+</html>

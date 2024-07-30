@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menue.css">
+</head>
+<body>
+    <div class="header">
+        <div class = "cont">
+            <div class = "buttons">
+                <button onclick="window.location.href = '../main_page.html'">Упражнения</button>
+                <button onclick="openTrenData()">Мои тренировки</button>
+                <button onclick="window.location.href = 'training.html'">Справочник</button>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <div id = "form" action = "/">
+            <h1>Справочник</h1>
+            <button type="button" onclick="window.location.href = 'sport/protein.html'">Спортивное питание</button>
+            <button type="button" onclick="window.location.href = 'sport/formacology.html'">Формакология</button>
+            <button type="button" onclick="window.location.href = 'sport/encyclopedia.html'">Энциклопедия</button>
+        </div>
+    </div>
+    <script>
+    function openTrenData() {
+        const workoutWindow = window.open('http://127.0.0.1:5000', '_blank', 'nodeIntegration=yes');
+        workoutWindow.focus();
+      }
+    </script>
+</body>
+</html>

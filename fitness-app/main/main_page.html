@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main_page.css">
+</head>
+<body>
+    <div class="header">
+        <div class = "cont">
+            <div class = "buttons">
+                <button onclick="window.location.href = 'main_page.html'">Упражнения</button>
+                <button onclick="openTrenData()">Мои тренировки</button>
+                <button onclick="window.location.href = 'menue/training.html'">Справочник</button>
+            </div>
+        </div>
+    </div>
+    <div class = "he">
+        <button onclick="openExerciseList()">список упражнений</button> 
+    </div>
+    <div class = "he">
+        <button onclick="openWorkoutData()">Данные тренировок</button> 
+    </div>
+
+    <div class="cat_container">
+        <div class="cat">
+            <div class="paw"></div>
+            <div class="paw"></div>
+            <div class="shake">
+                <div class="tail"></div>
+                <div class="main">
+                    <div class="head"></div>
+                    <div class="body">
+                        <div class="leg"></div>
+                    </div>
+                    <div class="face">
+                        <div class="mustache_cont">
+                            <div class="mustache"></div>
+                            <div class="mustache"></div>
+                        </div>
+                        <div class="mustache_cont">
+                            <div class="mustache"></div>
+                            <div class="mustache"></div>
+                        </div>
+                        <div class="nose"></div>
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="brow_cont">
+                            <div class="brow"></div>
+                            <div class="brow"></div>
+                        </div>
+                        <div class="brow_cont">
+                            <div class="brow"></div>
+                            <div class="brow"></div>
+                        </div>
+                        <div class="ear_l">
+                            <div class="inner"></div>
+                        </div>
+                        <div class="ear_r">
+                            <div class="outer"></div>
+                            <div class="inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openExerciseList() {
+          // Открыть новое окно для списка упражнений
+          const exerciseWindow = window.open('http://127.0.0.1:8000/', '_blank', 'nodeIntegration=yes');
+          exerciseWindow.focus();
+        }
+    
+        function openWorkoutData() {
+          // Открыть новое окно для данных тренировок
+          const workoutWindow = window.open('http://127.0.0.1:12345/', '_blank', 'nodeIntegration=yes');
+          workoutWindow.focus();
+        }
+        function openTrenData() {
+          // Открыть новое окно для данных тренировок
+          const workoutWindow = window.open('http://127.0.0.1:5000', '_blank', 'nodeIntegration=yes');
+          workoutWindow.focus();
+        }
+      </script>
+    
+</body>
+</html>

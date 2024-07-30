@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Календарь</title>
+    <link rel="stylesheet" type="text/css" href="/static/calendar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/home"class="button">На домашнюю страницу</a>
+    <h1><a href="/left/{{filename}}" class="button"><</a> Календарь на {{ month }} месяц {{ year }} года <a href="/right/{{filename}}" class="button">></a></h1>
+    <table>
+        <tr>
+            <th>Пн</th>
+            <th>Вт</th>
+            <th>Ср</th>
+            <th>Чт</th>
+            <th>Пт</th>
+            <th>Сб</th>
+            <th>Вс</th>
+        </tr>
+        {% for week in calendar %}
+            <tr>
+                {% for day in week %}
+                    {% if day %}
+                        <td class="day-circle {% if day['type'] == 'true' %}green{% else %}red{% endif %}"><a href="/{{ filename }}/{{ day['day'] }}">{{ day['day'] }}</a></td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Дaта: {{ content['date'] }}</h2>
+    <h1>Что было в эту дату:</h1>
+        <p>Данные о весе: {{ content['weight'] }}</p>
+        {% if content['type'] == 'true' %}
+        <h1>Ваши тренировки</h1>
+        {% for tr in content['tren'] %}
+        <p>Тренировка: {{ tr['name'] }}</p>
+        <p>Время тренировки: {{ tr['time'] }}</p>
+        {% endfor %}
+        {% else %}
+        <h1>В этот день вы не тренировались</h1>
+        {% endif %}
+
+        <a href="/home"class="button">На домашнюю страницу</a>
+</body>
+</html>

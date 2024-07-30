@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+}
+
+.arrow-left-5{
+    margin: 20px 8px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    fill: #337AB7; 
+    transition: fill 0.5s ease-out, transform 0.3s ease-in;    
+}
+.arrow-left-5 {
+    transform: rotate(90deg);
+}
+
+.arrow-left-5:hover {
+    fill: #BFE2FF;
+    transform: scale(1.2);
+}
+.arrow-left-5:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+
+#form{
+    display: flex;
+    flex-direction: column; /*в столбик*/
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 80vh;
+    text-align: center;
+    padding-left: 70px;
+}
+
+button{
+    margin: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: azure;
+}
+button:hover{
+    color:chocolate;
+}
+#form h1{
+    color: aliceblue;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Расположение по центру горизонтально */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    height: 100vh; /* Высота контейнера равна высоте видимой области страницы */
+}
+
+.first{
+    background: url('video/photo/грудь.jpg') no-repeat left center;
+    background-size: 50% auto; 
+    padding-left: 70px;
+}
+
+.second{
+    background: url('video/photo/спина.jpg') no-repeat left center;
+    background-size: 45% auto; 
+    padding-left: 70px;
+}
+.third{
+    background: url('video/photo/ноги.jpg') no-repeat left center;
+    background-size: 50% auto; 
+    padding-left: 70px;
+}
+.fourth{
+    background: url('video/photo/ягодичные.jpg') no-repeat left center;
+    background-size: 37% auto; 
+    padding-left: 70px;
+}
+.fifth{
+    background: url('video/photo/дельа.jpg') no-repeat left center;
+    background-size: 44% auto; 
+    padding-left: 70px;
+}
+.sixth{
+    background: url('video/photo/руки_бицепс.jpg') no-repeat left center;
+    background-size: 34.5% auto;
+    clip-path: inset(3% 0 0 0); 
+    padding-left: 70px;
+}
+.seventh{
+    background: url('video/photo/руки_трицепс.jpg') no-repeat left center;
+    background-size: 33.5% auto; 
+    padding-left: 70px;
+}
+.eighth{
+    background: url('video/photo/предплечье.png') no-repeat left center;
+    background-size: 35% auto; 
+    padding-left: 70px;
+}
+.ninth{
+    background: url('video/photo/пресс.jpg') no-repeat left center;
+    background-size: 46% auto;  
+    padding-left: 70px;
+}
+.ff{
+    background: url('video/photo/Функциональные_упражнения.jpg') no-repeat left center;
+    background-size: 21% auto; 
+    padding-left: 70px;
+}
+.tt{
+    background: url('video/photo/кардио.jpg') no-repeat left center;
+    background-size: 44.5% auto; 
+    clip-path: inset(4% 0 0 0);
+    padding-left: 70px;
+}
+.thth{
+    background: url('video/photo/растяжка.jpg') no-repeat left center;
+    background-size: 40% auto; 
+    padding-left: 70px;
+}
+
+
+.heartbeat-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline block;
+}
+.heartbeat-2 svg {
+    stroke: #337AB7;
+    stroke-width: 2px;
+    fill: none;
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: 0;
+    animation: heartbeat-2 4s infinite linear;
+    height: 50%;
+}
+@keyframes heartbeat-2 {
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
+.button{
+    margin: 10px;
+    background-color: transparent;
+    border: white;
+    font-size: 15px;
+    color: azure;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 10px;
+    display: block;
+    margin: 0 auto;
+}

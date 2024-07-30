@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: white;
+}
+
+
+h1, h3 {
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s; 
+}
+
+.button{
+    margin: 10px;
+    background-color: transparent;
+    border: white;
+    font-size: 15px;
+    color: azure;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 10px;
+}
+
+p {
+    float: right;
+    width: 48%;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 20%;
+    border:none;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    resize:inherit;
+    background-color: transparent;
+    color: white;
+}
+
+textarea {
+    padding: 8px;
+    width: 20%;
+    border:none;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    resize:inherit;
+    background-color: transparent;
+    color: white;
+    overflow:hidden;
+}
+.image-container {
+    margin-top: 10px; 
+}
+
+.arrow-curved {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-right: 9px solid #ffffff;
+    transform: rotate(10deg);
+  }
+  
+  .arrow-curved:after {
+    content: "";
+    position: absolute;
+    border: 0 solid transparent;
+    border-top: 3px solid #ffffff;
+    border-radius: 20px 0 0 0;
+    top: -12px;
+    left: -9px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+  }
+
+  .arrow-curved {
+    display: inline-block; /* Делаем элемент строчным блоком */
+    margin-left: 15px;
+}
+
+.arrow-left-5{
+    margin: 20px 8px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    fill: #337AB7; 
+    transition: fill 0.5s ease-out, transform 0.3s ease-in;    
+}
+.arrow-left-5 {
+    transform: rotate(90deg);
+}
+
+.arrow-left-5:hover {
+    fill: #BFE2FF;
+    transform: scale(1.2);
+}
+.arrow-left-5:hover {
+    transform: rotate(90deg) scale(1.2);
+}

@@ -1,0 +1,5 @@
+Тренировчка
+3
+file9.txt 10
+file3.txt 10
+file2.txt 10

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка файла</title>
+    <link rel="stylesheet" type="text/css" href="/static/viewingtr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stripes-container">
+        <div class="stripe top"></div>
+        <div class="stripe top"></div>
+        <div class="stripe top"></div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Просмотр тренировки:</h1>
+            <label for="name">Название:</label>
+            <p>{{ exercise_content['name'] }}</p>
+            <br>
+            <br>
+            <label for="name">Количество подходов:</label>
+            <p>{{ exercise_content['count_podh'] }}</p>
+            <br>
+            <br>
+            <label for="name">Упражнения:</label>
+            <br>
+            <div id="exercises">
+                {% for exercise in exercise_content['exercises'] %}
+                <div class="exercise-box" data-exercise='{{ exercise | tojson }}'>
+                    <h2>{{ exercise['name_ypr'] }}</h2>
+                    <label for="name">Время выполнения: {{ exercise['time'] }}c.</label>
+                </div>
+                {% endfor %}
+            </div>
+    
+            <div id="info-popup" class="info-popup">
+                <h3 id="exercise-name"></h3>
+                <p id="exercise-description"></p>
+                <img id="exercise-imagepath" alt="Exercise Image">
+                <button id="close-popup">Закрыть</button>
+            </div>
+    
+            <form action="/back" method="post" enctype="multipart/form-data">
+            <button type="submit">Назад</button>
+            </form>
+    
+            <form action="/edit_trenirovki/{{ filename }}" method="post" enctype="multipart/form-data">
+                <button type="submit">Редактировать</button>
+            </form>
+    
+            <script src="/static/script.js"></script>
+        </div>
+    </div>
+    
+</body>
+</html>

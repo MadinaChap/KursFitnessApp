@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать упражнение</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ypr.css') }}">
+</head>
+<body>
+    <a href="../">
+        <svg class="arrow-left-5" viewBox="0 0 154 109">
+            <symbol id="Arrow" viewBox="-73.9 -55.3 135.9 85.4">
+                <g>
+                    <polygon points="-73.9,29.1 -6,-9.2 61.9,30.1 61.9,14.2 -6,-25.1 -73.9,14.2 "/>
+                </g>
+                <g>
+                    <polygon points="-73.9,-1 -6,-39.3 61.9,0 61.9,-16 -6,-55.3 -73.9,-16 "/>
+                </g>
+            </symbol>
+            <use xlink:href="#Arrow" width="135.9" height="85.4" id="XMLID_1_" x="-73.9" y="-55.3" transform="matrix(1.007 0 0 -1.007 83.0005 42)" />
+        </svg>
+    </a>
+    <form action="/delete/{{ filename }}" method="post">
+        <button type="submit" class="button">Не создавать</button>
+    </form>
+    <h1> упражнение: {{ ex_name }}</h1>
+    <form action="/save/{{ filename }}" method="post" enctype="multipart/form-data">
+        <label for="name">Название:</label>
+        <input type="text" id="name" name="name" value="{{ exercise_content['name'] }}" required>
+        <br>
+        <br>
+        <label for="description">Инструкция:</label>
+        <textarea id="description" name="description" required>{{ exercise_content['description'] }}</textarea>
+        <br>
+        <div>
+            <br><label for="image">Текущая картинка:<div class="arrow-curved"></div></label>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename=exercise_content['image_path']) }}" alt="{{ exercise_content['name'] }}">
+            </div>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        <button type="submit" class="button">Сохранить</button>
+    </form>
+    <form action="/delete/{{ filename }}" method="post">
+        <button type="submit" class="button">Удалить</button>
+    </form>
+
+</body>
+</html>
